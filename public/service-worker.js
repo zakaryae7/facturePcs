@@ -3,8 +3,8 @@ elf.addEventListener('install', (e) => {
         caches.open('my-app-cache').then((cache) => {
             return cache.addAll([
                 '/',
-                '../index.html',
-                './manifest.json',
+                '/index.html',
+                '/manifest.json',
             ]);
         })
     );
