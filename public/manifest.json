@@ -1,0 +1,25 @@
+{
+    "short_name": "Facture PWA",
+    "name": "Facture PWA",
+    "description": "A description of your app",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#003170",
+    "theme_color": "#279EFF",
+    "icons": [
+        {
+            "src": "/ico.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/ico192.png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "/ico.png",
+            "sizes": "any"
+        }
+    ]
+}
