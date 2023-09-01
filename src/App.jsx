@@ -3,6 +3,7 @@ import { useReactToPrint } from 'react-to-print';
 import fullLogo from '/Full.png'
 
 function App() {
+
   // FOR MANIFEST APP
   let deferredPrompt;
   window.addEventListener('beforeinstallprompt', (e) => {
