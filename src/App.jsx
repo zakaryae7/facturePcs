@@ -136,18 +136,18 @@ function App() {
   }
 
   // Styles
-  const inputStyle = 'mx-2 border rounded-lg py-1 px-4 focus:outline-secondary duration-300 mx-4 w-max mx-auto mt-2';
+  const inputStyle = 'border rounded-lg py-1 px-4 focus:outline-secondary duration-300 mx-4';
   const hStyle = 'font-semibold';
   const priceStyle = 'text-start w-20 font-semibold '
 
   return (
-    <div className='lg:mx-10 mx-1 my-5'>
-      <nav className='flex justify-center lg:justify-normal'>
+    <div className='mx-10 my-5'>
+      <nav>
         <img src={fullLogo} className='h-8 mb-5' />
       </nav>
       <div>
-        <form className='border-y py-5 flex flex-col lg:flex-row items-center gap-5 justify-center lg:justify-normal text-center'>
-          <label className='flex flex-col lg:flex-row items-center'>
+        <form className='border-y  -sm:grid-cols-2 -lg:grid-cols-3 grid-cols-azz py-5 grid'>
+          <label>
             Date de la facture :
             <input
               type='date'
@@ -155,8 +155,8 @@ function App() {
               onChange={handleChange}
               className={inputStyle} />
           </label>
-          <div onClick={todayDate} className='cursor-pointer mx-auto lg:mx-10 w-max bg-secondary rounded-lg px-5 py-1 hover:bg-primary text-white duration-300'>Today's date</div>
-          <label className='flex flex-col lg:flex-row items-center'>
+          <div onClick={todayDate} className='cursor-pointer ml-10 w-max bg-secondary rounded-lg px-5 py-1 hover:bg-primary text-white duration-300'>Today's date</div>
+          <label>
             Nom Complet:
             <input
               type='text'
@@ -164,7 +164,7 @@ function App() {
               onChange={handleChange}
               className={inputStyle} />
           </label>
-          <label className='flex flex-col lg:flex-row items-center'>
+          <label>
             Address :
             <input
               type='text'
@@ -172,7 +172,7 @@ function App() {
               onChange={handleChange}
               className={inputStyle} />
           </label>
-          <label className='flex flex-col lg:flex-row items-center mt-5 '>
+          <label>
             Garantie :
             <input
               type='number'
@@ -181,29 +181,28 @@ function App() {
               className={inputStyle} />
           </label>
         </form>
-
-        <div className='border-b py-5 flex flex-col lg:flex-row lg:gap-10'>
-          <label className='flex flex-col lg:flex-row items-center mt-5 '>
+        <div className='border-b py-5'>
+          <label>
             Produit :
             <input type="text" className={inputStyle} id='product' />
           </label>
-          <label className='flex flex-col lg:flex-row items-center mt-5 '>
+          <label>
             Quantité :
             <input type="number" id='quantité' onChange={handleChange} name='quantity' className={inputStyle + " w-[5rem] appearance-none pr-1"} min={0} max={5} />
           </label>
-          <label className='flex flex-col lg:flex-row items-center mt-5 '>
+          <label>
             Prix unitaire	 :
             <input type="text" id='price' onChange={handleChange} name='total' className={inputStyle + " w-[8rem]"} />
           </label>
-          <label className='flex flex-col lg:flex-row items-center mt-5 justify-center'>
+          <label>
             Total TTC :
             <span className={inputStyle} id='spanTotalTtc'>{spanTTC} Dhs</span>
           </label>
-          <button onClick={AddProduct} className=' w-max block mx-auto lg:mx-0 mt-5  bg-secondary  rounded-lg px-5 py-1 hover:bg-primary text-white duration-300'>Add</button>
+          <button onClick={AddProduct} className='ml-10 w-max bg-secondary rounded-lg px-5 py-1 hover:bg-primary text-white duration-300'>Add</button>
         </div>
       </div>
 
-      <div ref={componentPDF} className='block mx-auto p-5 border mt-10'>
+      <div ref={componentPDF} className='block mx-auto p-5 border'>
         <div className='flex items-center justify-between mx-5'>
           <img src={fullLogo} className='h-10' />
           <h1 className='text-xl font-bold'>Facture No. <span>{localStorage.getItem('FNumber')}</span></h1>
@@ -261,7 +260,7 @@ function App() {
         DownloadPDF();
         LocalStorageFacturesNumber();
       }}
-        className='bg-secondary rounded-lg px-5 text-lg font-semibold py-1 hover:bg-primary text-white duration-300 block w-max mx-auto my-5' >
+        className='bg-secondary rounded-lg px-5 text-lg font-semibold py-1 hover:bg-primary hover:text-white duration-300 block w-max mx-auto my-5' >
         Downlaod Facture
       </button>
       <p className='text-center mt-20'>Made With 🖤 by Zakaryae Ennaciri . </p>
