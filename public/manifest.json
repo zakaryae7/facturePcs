@@ -2,7 +2,7 @@
     "short_name": "Facture",
     "name": "Facture PWA",
     "description": "Facture PWA IS A Bills maker for free and easily",
-    "start_url": "/",
+    "start_url": "https://facturepc.netlify.app/",
     "display": "standalone",
     "background_color": "#003170",
     "theme_color": "#279EFF",
