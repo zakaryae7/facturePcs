@@ -5,7 +5,6 @@ self.addEventListener('install', (e) => {
                 '/',
                 '/index.html',
                 '/manifest.json',
-                // Add other assets you want to cache here
             ]);
         })
     );
