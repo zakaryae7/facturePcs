@@ -1,6 +1,6 @@
 {
     "short_name": "Facture",
-    "name": "Facture Pc's World",
+    "name": "Facture PWA",
     "description": "Facture PWA IS A Bills maker for free and easily",
     "start_url": "https://facturepc.netlify.app/",
     "display": "standalone",
