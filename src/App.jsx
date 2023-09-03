@@ -33,6 +33,7 @@ function App() {
   let [infos, setinfos] = useState({
     total: '',
     quantity: '',
+    Payée: '',
   })
 
   let [clientInfo, setclientInfo] = useState({
@@ -40,6 +41,7 @@ function App() {
     lname: '',
     dateFacture: '',
     garantie: '0',
+    Restant: '',
   })
 
   const handleChange = (event) => {
@@ -137,7 +139,7 @@ function App() {
   }
 
   // Styles
-  const inputStyle = 'mx-2 border rounded-lg py-1 px-4 focus:outline-secondary duration-300 mx-4 w-max mx-auto mt-2';
+  const inputStyle = 'ml-4 mx-2 border rounded-lg py-1 px-4 focus:outline-secondary duration-300 mx-4 w-max mx-auto mt-2';
   const hStyle = 'font-semibold';
   const priceStyle = 'text-start w-20 font-semibold '
 
@@ -179,7 +181,23 @@ function App() {
               type='number'
               name='garantie'
               onChange={handleChange}
-              className={inputStyle} />
+              className={inputStyle + " w-10"} />
+          </label>
+          <label className='flex flex-col lg:flex-row items-center mt-5 '>
+            Payée :
+            <input
+              type='number'
+              name='Payée'
+              onChange={handleChange}
+              className={inputStyle + " w-[100px]"} />
+          </label>
+          <label className='flex flex-col lg:flex-row items-center mt-5 '>
+            Restant :
+            <input
+              type='number'
+              name='Restant'
+              onChange={handleChange}
+              className={inputStyle + " w-[100px]"} />
           </label>
         </form>
 
@@ -229,6 +247,12 @@ function App() {
           <h1>
             Service Aprés Vente :
             <span> Garantie {clientInfo.garantie} Mois</span>
+          </h1>
+          <h1>
+            <span>Montant Payée : {clientInfo.Payée} Dhs</span>
+          </h1>
+          <h1>
+            <span>Montant Restant : {clientInfo.Restant} Dhs</span>
           </h1>
         </div>
         <div className='my-10'>
